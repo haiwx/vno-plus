@@ -1,0 +1,36 @@
+{
+	"name"	        	: "哔哩萌的小窝",
+	"short_name"		: "哔哩萌",
+	"lang"				: "zh-CN",
+	"theme_color"		: "#E83015",
+	"background_color"	: "#E83015",
+	"icons"				: [
+	{
+        "src"   : "https://www.bilimoe.com/assets/images/favicon256.png",
+        "sizes" : "256x256",
+        "type"  : "image/png"
+    },
+	{
+        "src"   : "https://www.bilimoe.com/assets/images/favicon192.png",
+        "sizes" : "192x192",
+        "type"  : "image/png"
+    },
+	{
+        "src"   : "https://www.bilimoe.com/assets/images/favicon128.png",
+        "sizes" : "128x128",
+        "type"  : "image/png"
+    },
+	{  
+		"src"	: "https://www.bilimoe.com/assets/images/favicon96.png",  
+		"sizes"	: "96x96",
+		"type"	: "image/png" 
+	},
+	{  
+		"src"	: "https://www.bilimoe.com/assets/images/favicon32.png",  
+		"sizes"	: "32x32",
+		"type"	: "image/png" 
+	}], 
+	"start_url"			: "/",
+	"display"			: "standalone",
+	"orientation" 		: "portrait-primary"
+}

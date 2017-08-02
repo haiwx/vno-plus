@@ -1,0 +1,36 @@
+<header class="panel-cover {{#if post}}panel-cover--collapsed{{/if}}" {{#if @blog.cover_image}}style="background-image: url({{@blog.cover_image}})"{{/if}}>
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+	
+	
+        <a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页"><img src="/assets/images/avatar.jpg" width="80" alt="{{@blog.title}} logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="{{@blog.url}}" title="前往 {{@blog.title}} 的主页">{{@blog.title}}</a></h1>
+	<span class="panel-cover__subtitle panel-subtitle">小白的日常</span>        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">{{@blog.description}}</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+              <li class="navigation__item"><a href="/ghost-archives/" title="文章归档">归档</a></li>
+              <li class="navigation__item"><a href="/links" title="我的朋友">友链</a></li>
+              <li class="navigation__item"><a href="/guestbook" title="我们来聊天吧~">留言</a></li>
+            </ul>
+          </nav>
+          </div>
+          <div>
+          {{> social}}
+          </div>
+        </div>
+
+      </div>
+    </div>
+	
+    <div class="panel-cover--overlay cover-disabled"></div>
+  </div>
+</header>

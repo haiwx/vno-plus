@@ -1,0 +1,128 @@
+<!--
+ ____ _____ _      _____ __  __  ____  ______ 
+|  _ \_   _| |    |_   _|  \/  |/ __ \|  ____|
+| |_) || | | |      | | | \  / | |  | | |__   
+|  _ < | | | |      | | | |\/| | |  | |  __|  
+| |_) || |_| |____ _| |_| |  | | |__| | |____ 
+|____/_____|______|_____|_|  |_|\____/|______|
+                                              
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Meta }}
+    <title>{{meta_title}}</title>
+    
+   <!--<meta name="theme-color" content="#E66000">-->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="application-name" content="哔哩萌的小窝">
+    <meta name="mobile-web-app-capable" content=yes>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="哔哩萌的小窝">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{meta_description}}">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:description" content="{{meta_description}}">
+    
+    <link rel=manifest href="/assets/manifest.json">
+    <link rel="icon" type="image/png" href="/assets/images/ico.png">
+    <link href="/assets/images/ico.png" rel="shortcut icon" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/images/favicon256.png">
+
+    {{! Styles and Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/vno.css"}}" />
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/tomorrow.css"}}">
+    <link rel="stylesheet" type="text/css" href="/assets/css/remodal.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/jquery.gsearch.min.css">
+    <script src="/assets/js/APlayer.min.js"></script>  
+
+    {{! Ghost Head }}
+    {{ghost_head}}
+
+</head>
+<body class="{{body_class}}">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    {{> side-panel}}
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            {{{body}}}
+
+            {{> footer}}
+        </div>
+    </div>
+
+    {{! Ghost Footer }}
+    {{ghost_foot}}
+
+    <!-- Compatibility for Ghost 0.7.0: http://dev.ghost.org/no-more-jquery/ -->
+    <script type="text/javascript">  
+      if (typeof jQuery == 'undefined') {
+        document.write('<script type="text/javascript" src="{{asset "js/jquery.min.js"}}"></'+'script>');
+      }
+    </script>
+
+    {{! The main JavaScript file }}
+    <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
+    <script src="/assets/js/player.js"></script>  
+
+    {{! Highlight.js }}
+    <script type="text/javascript" src="{{asset "js/highlight.pack.js"}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+   {{> "gsearch"}}
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/remodal.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.gsearch.min.js"></script>
+
+    <script>  
+       $(document).one('opening', '.remodal', function () {
+       $('#search').gsearch();
+});
+    </script>
+
+    <script>
+       var t=$(window),n=($("body"),$("div.x-goto-top"));t.scroll(function(){var e=t.scrollTop();e>1600?n.show():n.hide()}),n.click(function(){$("html, body").animate({scrollTop:0},1e3)})
+    </script>
+    
+    <script type="text/javascript" src="{{asset "js/dist/bigfoot.min.js"}}"></script>
+    <script type="{{asset "text/javascript"}}">
+        $.bigfoot();
+    </script>
+    <script type="text/javascript">
+        var bigfoot = $.bigfoot(
+            {
+                deleteOnUnhover: false,
+                preventPageScroll: false,
+                hoverDelay: 250
+            }
+        );
+    </script>
+    
+   <script>
+	if('serviceWorker' in navigator) {
+    navigator.serviceWorker  
+        .register('/sw.js')
+        .then(function() { console.log('Service Worker Registered'); });  
+}
+   </script>
+
+</body>
+</html>

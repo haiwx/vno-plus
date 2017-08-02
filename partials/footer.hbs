@@ -1,0 +1,48 @@
+<section class="footer">
+<footer>
+    <span class="footer__copyright">
+<div><span id="span_dt_dt"> </span>
+<script language="javascript">
+function show_date_time(){
+window.setTimeout("show_date_time()", 1000);
+BirthDay=new Date("6/10/2016 00:00:00");//这个日期是可以修改的
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());//其实仅仅改了这里
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=Math.floor(e_hrsold);
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=Math.floor((e_hrsold-hrsold)*60);
+seconds=Math.floor((e_minsold-minsold)*60);
+span_dt_dt.innerHTML="博客已萌萌哒运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒 🐼 ";
+}
+show_date_time();
+</script></div>
+    </span>
+	<span class="footer__copyright">
+	<div>Links： <a href="/links/" target="_blank">Friends</a> | <a href="https://s.bilimoe.com/" target="_blank" rel="noopener noreferrer">Sign</a> | <a href="/rss" target="_blank">Rss</a> | <a href="/guestbook/" target="_blank">Talk</a> | <a href="http://key.bilimoe.com" target="_blank" rel="noopener noreferrer">Key</a> | <a href="/tv-play/" target="_blank">Tv</a> | <a href="https://pan.bilimoe.com/" target="_blank" rel="noopener noreferrer">Pan</a> | <a href="/about" target="_blank">Me</a></div>
+	</span>
+	<span class="footer__copyright">
+	<div>神奇地搭建于<a href="https://www.qcloud.com" target="_blank" rel="noopener noreferrer">腾讯云</a>.<a href="https://sm.ms/" target="_blank" rel="noopener noreferrer">SM.MS</a> 提供图床服务.<a href="https://www.dnspod.cn" target="_blank" rel="noopener noreferrer">DNSPod</a> 提供DNS解析服务</div>
+	</span>
+	<span class="footer__copyright">
+	<div>© 2017 <a href="https://www.bilimoe.com">哔哩萌</a>.Powered by  <a href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a>.Theme <a href="https://github.com/onevcat/vno/" target="_blank" rel="noopener noreferrer">vno</a> designed by <a href="https://onevcat.com/" target="_blank" rel="noopener noreferrer">onevcat</a>.<a href="/sitemap.xml" target="_blank">站点地图</a>.</div>
+	</span>
+	<span class="footer__copyright">
+	<div>Made with ❤ by BiliMoe.陕ICP备17000396
+</div>
+	</span>
+	<span class="footer__copyright">
+	<div><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/CC-3.0-CN.png" border="0"></a></div>
+	</span>
+</footer>
+    <div class="x-goto-top">
+        <div class="x-arrow"></div>
+        <div class="x-stick"></div>
+    </div>
+<script>console.log("\n %c Vno 0.1.0 %c HTTPS://BILIMOE.COM \n\n","color: #FFFFFF; background: #FF9900; padding:5px 0;","color: #FFFFFF;background: #BDBDBD; padding:5px 0;");</script>    
+</section>
