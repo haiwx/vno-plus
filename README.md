@@ -4,7 +4,7 @@ Vno-plus, just this ghost theme  + Search archives table
 # 说明（备份）
 ***vno-plus*** 只是在主题基础上集成了搜索，归档，完善了表格功能，其它并无多大改变，我什么都没做，都是大佬们的功劳。  
 
-![vno](https://ooo.0o0.ooo/2017/04/16/58f31fa983d10.png)  
+![vno](https://i.loli.net/2017/08/18/5996fb71eabad.png)  
  
 [归档方案提供者](https://github.com/flute/ghost-archives)  
 [表格方案提供者](http://218.245.6.35/2016/06/02/ghost-blogtian-jia-dai-ma-gao-liang-he-biao-ge-yu-fa-zhi-chi/)  
